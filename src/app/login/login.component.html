@@ -1,0 +1,20 @@
+<p>login works!</p>
+<div class="btn btn-danger" *ngIf="error">{{ error }}</div>
+<div class="col-md-4 offset-md-4 mt-3">
+<div class="card">
+    <h5 style="text-align: center;">login</h5>
+    <form  #loginform="ngForm" (ngSubmit)="login(loginform)">
+    <div class="card-body">
+        <div class="col-md-6">
+        <label for="email">email</label>
+        <input type="email" id="email" name="email" ngModel #email="ngModel"><br><br>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" ngModel #password="ngModel">
+    </div></div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-primary">submit</button>
+        <button type="reset" class="btn btn-danger">reset</button>
+    </div>
+    </form>
+</div>
+</div>

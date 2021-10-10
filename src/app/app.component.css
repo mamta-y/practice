@@ -1,0 +1,21 @@
+.navbar-brand{
+    color: black;
+    font-size: xx-large;
+}
+.navbar-nav me-auto mb-2 mb-lg-0{
+    flex:1 auto;
+        float: right;
+      }
+      
+
+      
+      /* Responsive navigation menu (for mobile devices) */
+      @media screen and (max-width: 600px) {
+        .navbar-nav me-auto mb-2 mb-lg-0{
+          float: none;
+          display: block;
+        }
+    }
+    
+
+    

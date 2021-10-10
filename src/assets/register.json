@@ -1,0 +1,39 @@
+{
+  "verify": [
+    {
+      "name": "mamta",
+      "email": "mam@gmail.com",
+      "password": "mamta",
+      "role": "user",
+      "id": 1
+    },
+    {
+      "name": "macc",
+      "email": "yadav@gmail.com",
+      "password": "mamta",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "name": "pen aaa",
+      "email": "aa@gmail.com",
+      "password": "mamta",
+      "role": "user",
+      "id": 3
+    },
+    {
+      "name": "sapna",
+      "email": "sapna@gmail.com",
+      "password": "sapna",
+      "role": "admin",
+      "id": 4
+    },
+    {
+      "name": "vishal",
+      "email": "vishal@gmail.com",
+      "password": "vishal",
+      "role": "user",
+      "id": 5
+    }
+  ]
+}

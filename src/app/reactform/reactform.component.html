@@ -1,0 +1,76 @@
+<p>reactform works!</p>
+<div class="container mt-4">
+    
+        <div class="col-md-6">
+            <div class ="form-group">
+                <form [formGroup]="logininform" (ngSubmit)="getData()">
+                    <div class="form-row">
+                      <div class="form-group col-sm-10">
+                          <div class="col-sm-10">
+                        <label for="fname">firtsname</label>
+                        <input type="text" class="form-control" id="fname" placeholder="firtsname" formControlName="fname">
+                    <span  id="check" *ngIf="logininform.get('fname').touched && logininform.get('fname').hasError('required')">name is required</span>  
+                    <span  id="check" *ngIf ="logininform.get('fname').touched && logininform.get('fname').hasError('minlength')">minlength should be 3 characters</span>
+                    <span id="check"    *ngIf ="logininform.get('fname').touched && logininform.get('fname').hasError('maxlength')">maxlength should be 10 characters</span>
+                </div></div>
+                      <div class="form-group col-sm-10">
+                        <label for="lname">lastname</label>
+                        <input type="text" class="form-control" id="lname" placeholder="lastname" formControlName="lname">
+                       <span id="check"  *ngIf  ="logininform.get('lname').touched && logininform.get('lname').hasError('required')">name is required</span>  
+                        <span id="check" *ngIf  ="logininform.get('lname').touched && logininform.get('lname').hasError('minlength')">minlength should be 3 characters</span>
+                        <span  id="check" *ngIf ="logininform.get('lname').touched && logininform.get('lname').hasError('maxlength')">maxlength should be 10 characters</span>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="emaill">Email</label>
+                        <input type="email" class="form-control" id="emaill" placeholder="Email" formControlName="emaill" >
+                        <span  id="check" *ngIf="logininform.get('emaill').touched && logininform.get('emaill').hasError('required')">email is required</span>  
+                        <span  id="check" *ngIf ="logininform.get('emaill').touched && logininform.get('emaill').hasError('email')">give valid email address</span>
+
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" >
+                        <span  id="check" *ngIf="logininform.get('password').touched && logininform.get('password').hasError('required')">name is required</span>  
+                        <span  id="check" *ngIf  ="logininform.get('password').touched && logininform.get('password').hasError('minlength')">minlength should be 3 characters</span>
+                        <span id="check" *ngIf ="logininform.get('password').touched && logininform.get('password').hasError('maxlength')">maxlength should be 10 characters</span>
+
+                      </div>
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                      >
+                      <span  id="check" *ngIf="logininform.get('address').touched && logininform.get('address').hasError('required')">name is required</span>  
+                    </div>
+                    
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city">
+                        <span  id="check" *ngIf="logininform.get('city').touched && logininform.get('city').hasError('required')">name is required</span>  
+
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState" class="form-control">
+                          <option selected>Choose...</option>
+                          <option>delhi</option>
+                          <option value="">goa</option>
+                          <option value="">chennai</option>
+                          <option value="">kerala</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="pincode">pincode</label>
+                        <input type="text" class="form-control" id="pincode">
+                        <span  id="check" *ngIf="logininform.get('pincode').touched && logininform.get('pincode').hasError('required')">name is required</span>  
+
+                      </div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" [disabled]="!logininform.valid">Sign in</button>
+                  </form>
+            </div>
+        </div>
+
+</div>

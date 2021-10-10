@@ -1,0 +1,21 @@
+.row{
+    padding: 10px;
+}
+.p1{
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+    padding-top: 30px;
+    
+}
+.p2{
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+}
+.p3{
+    padding-bottom: 40px;
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: italic;
+}

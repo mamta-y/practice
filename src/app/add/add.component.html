@@ -1,0 +1,26 @@
+
+<div class="alert alert-danger" *ngIf="error">
+    {{ error }}
+  </div>
+  <div class="alert alert-success" *ngIf="message">
+    {{ message }}
+  </div>
+ 
+<div class="row">
+    <div class="col-sm-10">
+        <form #adding="ngForm" (ngSubmit)="register(adding)">
+            <!--<label for="id">enter id</label>
+            <input type="text" name="id" id="id" ngModel #idfeild="ngModel" required>-->
+            <label for="name">enter name</label>
+            <input type="text" name="name" id="name" ngModel #namefeild="ngModel" required><br> <br>
+<label for="price">enter price</label>
+            <input type="number" name="price" id="price" ngModel #pricefeild="ngModel" required>
+            <label for="imageURL">enter imageURL</label>
+            <input type="text" name="imageURL" id="imageURL" ngModel #imageURLfeild="ngModel" required>
+            <div class="button-group float-right">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="reset" class="btn btn-primary">Reset</button>
+              </div>
+        </form>
+    </div>
+</div>

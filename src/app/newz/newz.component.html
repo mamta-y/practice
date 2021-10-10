@@ -1,0 +1,58 @@
+<p>newz works!</p>
+<!--<form class="d-flex">
+    <input  type="text"  aria-label="Search" name="searchText"  placeholder="search here.." [(ngModel)]="search">
+    <button class="btn btn-outline-success"  (click)=getdata()>Search</button>
+  </form>
+<div class="col-md-3" *ngFor="let article of articles" >
+<div class="card">
+    <img [src]="article.urlToImage" alt="" height="100px" width="100%">
+    <div class="card-body">
+<h5> {{ article.title }}</h5>
+<p>{{ article.description }}</p>
+<p>{{ article.author }}</p>
+    </div>
+    <div class="card-footer">
+        <a [href]="article.url" target="_blank" class="btn btn-success">read more</a>
+    </div>
+</div>
+</div>-->
+<div class="h12" style="height: 400px; width: 100%; ">
+  
+ 
+<form action="">
+  <div class="form-group">
+    <div class="box">
+    <div class="container-1">
+      <form class="d-flex">
+        
+    <input type="text" class="form-control mr-sm-2" name="searchText"  placeholder="search here.." [(ngModel)]="skey" style="box-sizing: border-box;" >
+    <button (click)="getdata()" class="btn btn-danger">Search</button>
+    </form>
+  </div>
+  </div>
+  </div>
+  
+</form>
+</div>
+
+<div class="wrapper" style="margin-left: 40px;">
+  <div class="row">
+  
+      <div class="col-md-3" *ngFor = "let a of articles">
+        <div class="card" style="width: 19rem; height: 40rem; margin-top: 30px; border: 2px solid lightblue; ">
+          <img class="card-img-top" style="width: 19rem; height: 12rem;"
+          [src]="a.urlToImage"
+          [alt]="a.title"
+          height="150px"
+          width="100%">
+          <div class="card-body">
+           <h5 class="card-title" style="text-align: justify;">{{ a.title }}</h5>
+           <p  appHover class="card-reveal" style="text-align: justify;">{{ a.description }}</p>
+           <p class="card-text">Author:{{ a.author }}</p> 
+          </div>
+         <div class="card-footer">
+             <a [href]="a.url" class="btn btn-success" style="margin-left:55px" target="_blank">Read More</a>
+         </div>
+        </div>
+      </div>
+    </div>

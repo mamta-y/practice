@@ -1,0 +1,42 @@
+<p>binding works!</p>
+
+<h1 appDemo> {{ title }}</h1>
+<div>name is {{ obj.name }}</div>
+<div>age is {{ obj.age }}</div>
+<div>place is {{ obj.place }}</div>
+<a [href]="href">facebook</a>
+<img [src]="path" alt="" height="100px" width="100px">
+
+
+Enter name:<input type="text" [(ngModel)] ="names" required>
+
+Enter surname:<input type="text" [(ngModel)] ="lname" required >
+
+ <p>your name is : {{names }} {{ lname }}</p>
+
+ <div *ngFor="let empl of emp">
+     name is {{ empl.name }} and age is {{ empl.age }} place is {{ empl.place }}
+ </div>
+ 
+ <div *ngIf = "success ;else error" class="bg-danger">
+    user added successfully
+</div>
+
+<ng-template #error>user not found</ng-template>
+<div [ngStyle]="{'background-color':'yellow'}"><p style="color: aqua; text-align: center;">welcome </p></div>
+<ul *ngFor="let empl of emp; even as e ; odd as o" >
+    <li *ngIf="e" class="bg-primary" >  name is {{ empl.name }} and age is {{ empl.age }} place is {{ empl.place }}</li>
+<li *ngIf="o" class="bg-success">name is {{ empl.name }} and age is {{ empl.age }} place is {{ empl.place }}</li>
+</ul>
+<br><br>
+<input type="text" [(ngModel)]="sum">
+<button (click)="add()">submit</button>
+<div *ngIf="correct" [ngStyle]="{'background-color':back,'color':'white'}">correct answer</div>
+<div *ngIf="wrong" [ngStyle]="{'background-color':back,'color':'white'}">wrong answer</div>
+<div>{{ user.name|uppercase }}</div>
+<div> {{ user|json }}</div>
+<div> {{ user|date }}</div>
+<h2>order is:{{ order }}</h2>
+<div [ngClass]= "'c1'">This is a ngClass example</div>
+<div [ngClass]= "'c1 c2'">This is a ngClass multiple class example</div>
+
