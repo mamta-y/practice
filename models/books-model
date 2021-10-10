@@ -1,0 +1,46 @@
+const express = require('express');
+const app = express();
+const mongoose=require('mongoose');
+const Joi=require('joi');
+const { required } = require('joi');
+
+const Book=  mongoose.model('Book', new mongoose.Schema({
+    name:{
+        type:String,
+        required:true,
+        minlength:6,
+        maxlength:15,
+        trim:true
+    },
+
+    price:{
+        type:Number,
+        required:true
+    },
+    imageURL:{
+        type:String,
+        required:true,  
+    }
+//     date:{
+//         default:Date.now(),
+//         type:Date
+//     },
+// ispublished:{
+//     type:String,
+//     required:true
+// }
+
+
+}) )
+function validateBook(book){
+const schema = Joi.object({
+name:Joi.string().required().min(6).max(15).trim(),
+price:Joi.number().required(),
+imageURL:Joi.string().required()
+// ispublished:Joi.string().required(),
+// date:Joi.date()
+});
+return schema.validate(book);
+}
+module.exports.Book=Book;
+module.exports.validateBook=validateBook;
